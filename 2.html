@@ -1,0 +1,11 @@
+<div id="notes"></div>
+
+<script>
+  async function loadNotes() {
+    const res = await fetch("https://raw.githubusercontent.com/nandwani-rohit-aol/kaalgyani/refs/heads/main/1.html");
+    const html = await res.text();   // response is plain text / HTML
+    document.getElementById("notes").innerHTML = html;
+  }
+
+  loadNotes();
+</script>
